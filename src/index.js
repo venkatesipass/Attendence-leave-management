@@ -3,42 +3,15 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { createBrowserRouter } from "react-router";
-import { RouterProvider } from "react-router-dom";
-import CentrolDashboard from "./CentrolDashboard";
-import ManagerDashboard from "./ManagerDashboard";
-import Attendance from "./Attendance";
-import LeaveManagement from "./LeaveManagement";
-import Header from "./Header";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Header />,
-  },
-  {
-    path: "/centrolDashboard",
-    element: <CentrolDashboard />,
-  },
-  {
-    path: "/managerDashboard",
-    element: <ManagerDashboard />,
-  },
-  {
-    path: "/attendance",
-    element: <Attendance />,
-  },
-  {
-    path: "/leaveManagement",
-    element: <LeaveManagement />,
-  },
-]);
+
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <App />
   </React.StrictMode>
 );
 

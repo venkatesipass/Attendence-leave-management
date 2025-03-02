@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router";
+import "./header.css";
 const Header = () => {
   return (
-    <div>
+    <div className="header">
       <Link to="/centrolDashboard">
         <h1>Cetrol Dashboard</h1>
       </Link>
