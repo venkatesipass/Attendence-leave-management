@@ -6,6 +6,7 @@ import CentrolDashboard from "./CentrolDashboard";
 import ManagerDashboard from "./ManagerDashboard";
 import Attendance from "./Attendance";
 import LeaveManagement from "./LeaveManagement";
+import EmployeeRegistration from './Employee/EmployeeResigtration.jsx'
 import Header from "./Header/Header.jsx";
 import { Outlet } from 'react-router';
 import { Children } from 'react';
@@ -23,10 +24,14 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    children:[
+    children: [
       {
         path: "/centrolDashboard",
         element: <CentrolDashboard />,
+      },
+      {
+        path:"/employeeRegistration",
+        element: <EmployeeRegistration />
       },
       {
         path: "/managerDashboard",
@@ -39,17 +44,17 @@ const router = createBrowserRouter([
       {
         path: "/leaveManagement",
         element: <LeaveManagement />,
-      }     
+      }
     ]
   },
 ]);
 
 function App() {
-  
+
   return (
-      <div>
-        <RouterProvider router={router} />
-      </div>
+    <div>
+      <RouterProvider router={router} />
+    </div>
   )
 }
 

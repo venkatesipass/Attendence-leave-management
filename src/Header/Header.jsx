@@ -16,6 +16,7 @@ const Header = () => {
       <Link to="/leaveManagement">
         <h1>Leave Management</h1>
       </Link>
+      
     </div>
   );
 };
